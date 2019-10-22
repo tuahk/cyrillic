@@ -18,7 +18,7 @@ const Game = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    if (guess === currentLetter.normal) {
+    if (guess.toUpperCase() === currentLetter.normal.toUpperCase()) {
       setGuessIsCorrect(true);
     } else {
       setGuessIsCorrect(false);
