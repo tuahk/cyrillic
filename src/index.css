@@ -16,7 +16,7 @@ body {
   flex-basis: 100%;
   max-width: 100%;
   border-radius: 2em;
-  padding: 5%;
+  padding: 5% 5% 2% 5%;
   display: flex;
   flex-flow: row wrap;
 
@@ -54,9 +54,31 @@ body {
   flex-basis: 100%;
   text-align: center;
 }
-.success {
+.text-green {
   font-weight: bold;
   color: green;
+}
+
+.text-red {
+  color: red;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.correctInRow {
+  flex-basis: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.best {
+  flex-basis: 100%;
+  text-align: right;
+  margin: 0;
+  padding: 0;
 }
 
 @media only screen and (min-width: 512px) {

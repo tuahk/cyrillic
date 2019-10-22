@@ -1,17 +1,17 @@
 import React from 'react';
 
-const CorrectElement = ({ text, result }) => {
-  return <p className={`correct ${result}`}>{text}</p>;
+const CorrectElement = ({ text, classes }) => {
+  return <p className={`correct ${classes}`}>{text}</p>;
 };
 
 const Correct = ({ isCorrect, correctLetter }) => {
   if (isCorrect) {
-    return <CorrectElement text='Vastaus oikein!' result='success' />;
+    return <CorrectElement text={'Vastaus oikein!'} classes='text-green' />;
   } else if (isCorrect === false) {
     return (
       <CorrectElement
         text={`Pahus! Oikea vastaus on ${correctLetter}`}
-        result='fail'
+        classes='text-red text-bold'
       />
     );
   } else return null;
