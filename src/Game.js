@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import alphabets from './alphabets';
 import Correct from './Correct';
-import CorrectInRow from './CorrectInRow';
 import Best from './Best';
 
 const randomLetter = () => {
@@ -44,7 +43,7 @@ const Game = () => {
   return (
     <div className='gameWrapper'>
       <h1> Kyrilliset aakkoset</h1>
-      <CorrectInRow correctInRow={correctInRow} />
+      {/* <CorrectInRow correctInRow={correctInRow} /> */}
       <Correct
         isCorrect={guessIsCorrect}
         correctInRow={correctInRow}

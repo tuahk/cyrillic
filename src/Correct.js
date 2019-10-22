@@ -1,10 +1,11 @@
 import React from 'react';
+import CorrectInRow from './CorrectInRow';
 
 const CorrectElement = ({ text, classes }) => {
   return <p className={`correct ${classes}`}>{text}</p>;
 };
 
-const Correct = ({ isCorrect, correctLetter }) => {
+const Correct = ({ isCorrect, correctInRow, correctLetter }) => {
   if (isCorrect) {
     return <CorrectElement text={'Vastaus oikein!'} classes='text-green' />;
   } else if (isCorrect === false) {
@@ -14,7 +15,9 @@ const Correct = ({ isCorrect, correctLetter }) => {
         classes='text-red text-bold'
       />
     );
-  } else return null;
+  } else {
+    return <CorrectInRow correctInRow={correctInRow} />;
+  }
 };
 
 export default Correct;
